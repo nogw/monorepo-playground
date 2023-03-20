@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
+  "scripts": {
+    "dev:server": "yarn workspace @fp/server start:dev"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
