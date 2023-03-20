@@ -22,6 +22,12 @@ const graphQLSettingsPerReq = async (req: Request): Promise<OptionsData> => {
     schema,
     context: getContext({ user }),
     customFormatErrorFn: (error: GraphQLError) => {
+      /* eslint-disable no-console */
+      console.log(error.message);
+      console.log(error.locations);
+      console.log(error.stack);
+      /* eslint-enable no-console */
+
       return {
         message: error.message,
         locations: error.locations,
