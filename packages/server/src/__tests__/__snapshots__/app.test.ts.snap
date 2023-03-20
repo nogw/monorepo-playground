@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app server should return 200 and return logged user 1`] = `
+{
+  "data": {
+    "me": {
+      "email": "user0@fp.com",
+      "username": "user#0",
+    },
+  },
+}
+`;

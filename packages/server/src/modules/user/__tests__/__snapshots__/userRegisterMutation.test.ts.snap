@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserRegisterMutation should register an new user 1`] = `
+{
+  "userRegister": {
+    "error": "EMPTY",
+    "me": {
+      "username": "awesomeusername",
+    },
+    "token": "FROZEN-TOKEN",
+  },
+}
+`;

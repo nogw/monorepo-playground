@@ -1,11 +1,8 @@
-import registerSchema from './schemas/registerSchema';
-
 import { ZodError, ZodSchema } from 'zod';
 
 type ValidationResult = { error: string | null };
 
-//TODO: improve
-const validateSchema = <T>(schema: ZodSchema<T>, data: unknown): ValidationResult => {
+const ZodValidate = <T>(schema: ZodSchema<T>, data: unknown): ValidationResult => {
   try {
     schema.parse(data);
     return { error: null };
@@ -17,4 +14,4 @@ const validateSchema = <T>(schema: ZodSchema<T>, data: unknown): ValidationResul
   }
 };
 
-export { registerSchema, validateSchema };
+export { ZodValidate };

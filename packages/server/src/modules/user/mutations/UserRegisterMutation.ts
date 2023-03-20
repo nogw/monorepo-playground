@@ -2,7 +2,7 @@ import { GraphQLString, GraphQLNonNull } from 'graphql';
 import { mutationWithClientMutationId } from 'graphql-relay';
 import { errorField, successField } from '@entria/graphql-mongo-helpers';
 
-import { validateSchema, registerSchema } from '../../../validation/validateSchema';
+import { ZodValidate, registerSchema } from '../../../validation';
 import { generateJwtToken } from '../../../auth';
 
 import { UserModel } from '../UserModel';
@@ -17,7 +17,7 @@ export const userRegister = mutationWithClientMutationId({
     password: { type: new GraphQLNonNull(GraphQLString) },
   },
   mutateAndGetPayload: async ({ email, username, password }) => {
-    const { error } = validateSchema(registerSchema, { email, username, password });
+    const { error } = ZodValidate(registerSchema, { email, username, password });
 
     if (error) {
       return { error };

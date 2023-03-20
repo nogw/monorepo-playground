@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserLoginMutation should login with a registered user 1`] = `
+{
+  "userLogin": {
+    "error": "EMPTY",
+    "me": {
+      "username": "user#0",
+    },
+    "token": "FROZEN-TOKEN",
+  },
+}
+`;

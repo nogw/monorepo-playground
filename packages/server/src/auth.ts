@@ -9,9 +9,7 @@ export const getUser = async (token: Maybe<string>): Promise<Maybe<IUserDocument
   if (!token) return null;
 
   const subToken = token.substring(4);
-  const decodedToken = jwt.verify(subToken, config.JWT_SECRET) as {
-    id: string;
-  };
+  const decodedToken = jwt.verify(subToken, config.JWT_SECRET) as { id: string };
 
   const user = await UserModel.findOne({ _id: decodedToken.id });
 
