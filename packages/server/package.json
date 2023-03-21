@@ -22,9 +22,6 @@
     "koa-bodyparser": "^4.4.0",
     "koa-graphql": "^0.12.0",
     "mongoose": "^7.0.2",
-    "webpack": "^5.76.2",
-    "webpack-cli": "^5.0.1",
-    "webpack-node-externals": "^3.0.0",
     "zod": "^3.21.4"
   },
   "devDependencies": {
@@ -42,6 +39,9 @@
     "@types/supertest": "^2.0.12",
     "babel-loader": "^9.1.2",
     "mongodb-memory-server": "^8.12.1",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.3",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-node-externals": "^3.0.0"
   }
 }

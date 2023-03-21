@@ -6,9 +6,9 @@ import {
   disconnectWithMongoose,
   sanitizeTestObject,
 } from '../../test';
+import { generateJwtToken } from '../auth';
 import { createUser } from '../modules/user/fixtures/createUser';
 import app from '../app';
-import { generateJwtToken } from '../auth';
 
 beforeAll(connectWithMongoose);
 beforeEach(clearDatabaseAndRestartCounters);

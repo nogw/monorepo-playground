@@ -115,5 +115,6 @@ describe('UserRegisterMutation', () => {
     expect(result.errors).toBeUndefined();
     expect(result.data.userRegister.token).toBeNull();
     expect(result.data.userRegister.error).toBe('This username is already used');
+    expect(sanitizeTestObject(result.data)).toMatchSnapshot();
   });
 });
